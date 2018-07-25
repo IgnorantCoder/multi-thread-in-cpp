@@ -25,7 +25,7 @@ private:
 };
 
 template <std::size_t N>
-class MultiThreadAdder {
+class MultiThreadBinary {
 public:
     template <typename T>
     std::vector<T> add(
@@ -129,7 +129,7 @@ int main() {
     }
 
     {
-        const MultiThreadAdder<2> mt;
+        const MultiThreadBinary<2> mt;
         const std::vector<float> v0({ 1, 9, 8, 6, 7, 2, 2 });
         const std::vector<float> v1({ 4, 1, 2, 1, 6, 8, 9 });
         for (const auto e : mt.add(v0, v1)) {
